@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+  .wrapper{
+    position:relative;
+    width: 300px;
+}
+
+
+.hidelogo{
+    position: absolute;
+    height: 26%;
+    width: 101.2%;
+    background: #fff;
+    display: block;
+    background-color: #fff;
+}
+.dropbtn {
+  background-color: blue;
+  width: 300px;
+  height: 100px;
+  font-size: 16px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+.dropdown {
+  
+  position:fixed;
+  right:15px;
+  bottom:0;
+  box-shadow:0 0 0.1em #000;
+  border-radius: 50%;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #f9f9f9;
+  overflow: auto;
+  box-shadow:0 0 0.1em #000;
+}
+
+
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+</style>
+</head>
+<body>
+
+<div class="dropdown">
+  <button id="myBtn" class="dropbtn">SVM-BOT</button>
+  <div id="myDropdown" class="dropdown-content">
+
+<div class="wrapper">
+    <div class="hidelogo"></div>
+    <iframe 
+    allow="microphone;"
+    src="https://console.dialogflow.com/api-client/demo/embedded/972c0508-7406-4d05-9a40-04558001e5ea" style="border-color: #fff;background-color: #eee; width: 300px; height: 530px;"> 
+</iframe>
+  </div>
+</div>
+
+<script>
+document.getElementById("myBtn").onclick = function() {myFunction()};
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
