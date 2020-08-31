@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>SVM_BOT</title>
-<style type="text/css">
+<style>
 
-     .wrapper{
+
+  .wrapper{
     position:relative;
     width: 300px;
 }
@@ -19,82 +18,61 @@
     display: block;
     background-color: #fff;
 }
-.chat-box {
-    position:fixed;
-    right:15px;
-    bottom:0;
-    box-shadow:0 0 0.1em #000;
-     border-radius: 50%;
+.dropbtn {
+  background-color: blue;
+  width: 300px;
+  height: 100px;
+  font-size: 16px;
 }
 
-.chat-closed {
-    width: 100px;
-    height: 100px;
-    background: blue;
-    border:1px solid #eee;
-    color: #fff;
-
-    border-radius: 50%;
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
 }
 
-.chat-header {
-    width: 300px;
-    height: 50px;
-    background: blue;
-    color: #fff;
-    line-height: 33px;
-    text-indent: 20px;
-    border:1px solid #777;
-    border-bottom:none;
+.dropdown {
+  
+  position:fixed;
+  right:15px;
+  bottom:0;
+  box-shadow:0 0 0.1em #000;
+  border-radius: 50%;
 }
 
-.chat-content{
-    width:300px;
-    height:600px;
-    background:#ffffff;
-    border:1px solid #777;
-    overflow-y:auto;
-    word-wrap: break-word;
+.dropdown-content {
+  display: none;
+  background-color: #f9f9f9;
+  overflow: auto;
+  box-shadow:0 0 0.1em #000;
 }
 
 
 
-.hide {
-    display:none;
-}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
 </style>
 </head>
 <body>
-<div class="chat-box">
-<div class="chat-closed"></div>
-<div class="chat-header hide">SVM-BOT</div>
-<div class="chat-content hide">
+
+<div class="dropdown">
+  <button id="myBtn" class="dropbtn">SVM-BOT</button>
+  <div id="myDropdown" class="dropdown-content">
 
 <div class="wrapper">
     <div class="hidelogo"></div>
     <iframe 
     allow="microphone;"
-    src="https://console.dialogflow.com/api-client/demo/embedded/972c0508-7406-4d05-9a40-04558001e5ea" style="border-color: #fff;background-color: #eee; width: 286px; height: 570px;"> 
+    src="https://console.dialogflow.com/api-client/demo/embedded/972c0508-7406-4d05-9a40-04558001e5ea" style="border-color: #fff;background-color: #eee; width: 300px; height: 530px;"> 
 </iframe>
-</div>
+  </div>
 </div>
 
-</div>
-</div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-    $(".chat-closed").on("click",function(e){
-        $(".chat-header,.chat-content").removeClass("hide");
-        $(this).addClass("hide");
-    });
-
-    $(".chat-header").on("click",function(e){
-        $(".chat-header,.chat-content").addClass("hide");
-        $(".chat-closed").removeClass("hide");
-    });
-});
+<script>
+document.getElementById("myBtn").onclick = function() {myFunction()};
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 </script>
-</body>
 
+</body>
 </html>
